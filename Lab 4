@@ -1,0 +1,125 @@
+                    # BookCollection
+
+package Bookname;
+import java.util.ArrayList;
+
+//Book class
+class Book {
+ private int bookId;
+ private String bookName;
+ private String authorName;
+
+ // Parameterized constructor
+ public Book(int bookId, String bookName, String authorName) {
+     this.bookId = bookId;
+     this.bookName = bookName;
+     this.authorName = authorName;
+ }
+
+ // Getter methods to access book details
+ public int getBookId() {
+     return bookId;
+ }
+
+ public String getBookName() {
+     return bookName;
+ }
+
+ public String getAuthorName() {
+     return authorName;
+ }
+
+ // Override toString method for easy printing
+ @Override
+ public String toString() {
+     return "Book ID: " + bookId + ", Name: " + bookName + ", Author: " + authorName;
+ }
+}
+
+public class BookCollection {
+	 public static void main(String[] args) {
+	        // Create an ArrayList to store Book objects
+	        ArrayList<Book> bookList = new ArrayList<>();
+
+	        // Adding Book objects to the ArrayList
+	        bookList.add(new Book(1, "1984", "George Orwell"));
+	        bookList.add(new Book(2, "To Kill a Mockingbird", "Harper Lee"));
+	        bookList.add(new Book(3, "The Great Gatsby", "F. Scott Fitzgerald"));
+	        bookList.add(new Book(4, "Moby Dick", "Herman Melville"));
+	        bookList.add(new Book(5, "War and Peace", "Leo Tolstoy"));
+
+	        // Display all book details using an enhanced for loop
+	        for (Book book : bookList) {
+	            System.out.println(book);
+	        }
+	    }
+	}
+
+                      # ReverseList
+
+package List;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class ReverseList {
+	 public static void main(String[] args) {
+	        // Creating a list of strings
+	        List<String> inputList = new ArrayList<>();
+	        inputList.add("apple");
+	        inputList.add("banana");
+	        inputList.add("cherry");
+	        inputList.add("date");
+
+	        // Displaying the original list
+	        System.out.println("Original List: " + inputList);
+
+	        // Reversing the list using Collections.reverse()
+	        Collections.reverse(inputList);
+
+	        // Displaying the reversed list
+	        System.out.println("Reversed List: " + inputList);
+	    }
+	}
+
+                        # Sum Of Even Numbers
+
+package sumofeven;
+import java.util.ArrayList;
+public class SumOfEvenNumbers {
+	 public static void main(String[] args) {
+	        // Create an ArrayList and add some integers
+	        ArrayList<Integer> numbers = new ArrayList<>();
+	        numbers.add(10);
+	        numbers.add(15);
+	        numbers.add(20);
+	        numbers.add(25);
+	        numbers.add(30);
+	        numbers.add(35);
+	        numbers.add(50);
+	        
+	        // Call the method to calculate the sum of even numbers
+	        int sum = calculateSumOfEvenNumbers(numbers);
+	        
+	        // Print the result
+	        System.out.println("The sum of all even numbers is: " + sum);
+	    }
+
+	    // Method to calculate the sum of even numbers
+	    public static int calculateSumOfEvenNumbers(ArrayList<Integer> numbers) {
+	        int sum = 0; // Initialize sum to 0
+	        
+	        // Iterate through the ArrayList
+	        for (int number : numbers) {
+	            // Check if the number is even
+	            if (number % 2 == 0) {
+	                sum += number; // Add to sum if even
+	            }
+	        }
+	        
+	        return sum; // Return the total sum of even numbers
+	    }
+	}
+
+
+                      #
