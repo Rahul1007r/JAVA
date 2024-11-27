@@ -1,0 +1,54 @@
+                            # Append To HashSet
+
+package hash;
+import java.util.HashSet;
+public class AppendToHashSet {
+	  public static void main(String[] args) {
+	        // Create a HashSet
+	        HashSet<String> set = new HashSet<>();
+
+	        // Add elements to the HashSet
+	        set.add("Orange");
+	        set.add("Grape");
+	        set.add("Lemon");
+
+	        // Print the HashSet before appending
+	        System.out.println("HashSet before appending: " + set);
+
+	        // Append a specified element
+	        String newElement = "Jerry";
+	        set.add(newElement);
+
+	        // Print the HashSet after appending
+	        System.out.println("HashSet after appending: " + set);
+	    }
+
+}
+
+                            # StackExample
+
+package stack;
+import java.util.Stack;
+public class StackExample {
+	   public static void main(String[] args) {
+	        // Declare a stack
+	        Stack<Integer> stack = new Stack<>();
+
+	        // Store 10 elements into the stack
+	        for (int i = 1; i <= 10; i++) {
+	            stack.push(i);
+	        }
+
+	        // Display the stack after adding elements
+	        System.out.println("Stack after pushing 10 elements: " + stack);
+
+	        // Remove 4 elements from the stack
+	        for (int i = 0; i < 4; i++) {
+	            stack.pop();
+	        }
+
+	        // Display the stack after removing 4 elements
+	        System.out.println("Stack after popping 4 elements: " + stack);
+	    }
+
+}
