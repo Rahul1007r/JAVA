@@ -1,0 +1,160 @@
+                  # Hill Station
+
+package HS;
+//HillStations.java
+class HillStations {
+ public void location() {
+     System.out.println("Location of the hill station.");
+ }
+
+ public void famousFor() {
+     System.out.println("What the hill station is famous for.");
+ }
+}
+
+class Manali extends HillStations {
+ @Override
+ public void location() {
+     System.out.println("Manali is located in Himachal Pradesh.");
+ }
+
+ @Override
+ public void famousFor() {
+     System.out.println("Manali is famous for adventure sports and scenic beauty.");
+ }
+}
+
+class Mussoorie extends HillStations {
+ @Override
+ public void location() {
+     System.out.println("Mussoorie is located in Uttarakhand.");
+ }
+
+ @Override
+ public void famousFor() {
+     System.out.println("Mussoorie is famous for its pleasant weather and landscapes.");
+ }
+}
+class Gulmarg extends HillStations {
+ @Override
+ public void location() {
+     System.out.println("Gulmarg is located in Jammu and Kashmir.");
+ }
+
+ @Override
+ public void famousFor() {
+     System.out.println("Gulmarg is famous for skiing and its winter beauty.");
+ }
+}
+
+public class HillStation {
+ public static void main(String[] args) {
+     // Calling location() and famousFor() using HillStations reference
+     HillStations hill = new Manali();
+     hill.location();
+     hill.famousFor();
+
+     hill = new Mussoorie();
+     hill.location();
+     hill.famousFor();
+
+     hill = new Gulmarg();
+     hill.location();
+     hill.famousFor();
+ }
+}
+
+        # Animal_Test
+
+package Animal;
+//super class animal
+class Animal{
+	//method to be overriden
+	public void MakeSound() {
+		System.out.println("The Animal Make a Sound");
+		
+	}
+}
+//subclass dog
+class Dog extends Animal{
+	//override
+	public void MakeSound() {
+		System.out.println("The Dog Bark");
+		}
+}
+	//subclass cat
+	class Cat extends Animal{
+		public void Makesound() {
+			System.out.println("The Cat Meows");
+			
+		}
+	}
+	//main class to test the program
+
+public class Animal_Test {
+	public static void main(String[]args) {
+		//creating objects of each class
+		Animal animal=new Animal();
+		Dog dog = new Dog();
+		Cat cat = new Cat();
+		System.out.println("Animal Sound");
+		//displaying sound 
+		animal.MakeSound();
+		System.out.println("DOG SOUND");
+		dog.MakeSound();
+		System.out.println("CAT SOUND");
+		cat.Makesound();
+		
+	}
+}
+
+              # Vaccination
+
+package vaccine;
+abstract class Vaccine {
+    int age;
+    String nationality;
+
+    public Vaccine(int age, String nationality) {
+        this.age = age;
+        this.nationality = nationality;
+    }
+
+    public void firstDose() {
+        if (age >= 18 && nationality.equalsIgnoreCase("Indian")) {
+            System.out.println("First dose administered. Please pay 250 INR.");
+        } else {
+            System.out.println("Not eligible for first dose.");
+        }
+    }
+
+    public void secondDose(boolean firstDoseCompleted) {
+        if (firstDoseCompleted) {
+            System.out.println("Second dose administered.");
+        } else {
+            System.out.println("Please complete the first dose first.");
+        }
+    }
+
+    public abstract void boosterDose();
+}
+
+class VaccinationSuccessful extends Vaccine {
+    public VaccinationSuccessful(int age, String nationality) {
+        super(age, nationality);
+    }
+
+    @Override
+    public void boosterDose() {
+        System.out.println("Booster dose administered. You are fully vaccinated!");
+    }
+}
+
+public class Vaccination {
+    public static void main(String[] args) {
+        VaccinationSuccessful person1 = new VaccinationSuccessful(20, "Indian");
+        person1.firstDose();
+        person1.secondDose(true);
+        person1.boosterDose();
+    }
+}
